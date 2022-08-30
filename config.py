@@ -3,7 +3,7 @@ class TestData:
     base_url = 'https://www.labirint.ru/'
 
     phone_number = '8 800 000-00-01'
-    email = 'saprikino@mail.ru'
+    email = 'sapjjjmm45@mail.ru'
     negative = 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa'
 
     base_url_books = 'https://www.labirint.ru/books/'
