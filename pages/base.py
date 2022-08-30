@@ -79,7 +79,7 @@ class WebPage(object):
         try:
             source = self._web_driver.page_source
         except:
-            print(colored('Can not get page source', 'red'))
+            print('Can not get page source', 'red')
         return source
 
     def check_js_errors(self, ignore_list=None):

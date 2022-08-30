@@ -15,6 +15,14 @@ class MainPage(WebPage):
 
     Locator_logo_img = WebElement(css_selector='span.b-header-b-logo-e-logo')
 
+    #Локатор Вход и регистрация
+    Locator_auth = WebElement(css_selector='a.top-link-main_cabinet')
+    input_phone = WebElement(css_selector='input[placeholder="Введите свой код скидки, телефон или эл.почту"]')
+
+    locator_enter_btn = WebElement(id='g-recap-0-btn')
+    Locator_text =WebElement(id="_inputnamepin_95")
+    Locator_negative = WebElement(xpath='//*@class="full-input__msg-small js-msg-small"]')
+
     # Локатор кнопки поиск
     Locator_search = WebElement(id='search-field')
     Locator_search_btn = WebElement(class_name='b-header-b-search-e-btn')
@@ -31,7 +39,7 @@ class MainPage(WebPage):
     Locator_menu_text_multimedia = WebElement(css_selector='span>a[href="/office/"]')
     Locator_menu_multimedia = WebElement(xpath='//*[@href="multimedia"]')
     Locator_menu_contact = WebElement(css_selector='li[data-event-content="Контакты"]>a[href="/contact/"]')
-
+    Locator_abc = WebElement(xpath='//*[@class="b-stab-e-slider-item-e-txt-m-small js-search-tab-count"]')
     # ссылка скидки
     Locator_sale = WebElement(xpath='//a[@href="/sale/"]')
 
@@ -58,6 +66,3 @@ class MainPage(WebPage):
     locator_clear_basket = WebElement(xpath='//a[@class="b-link-popup"]')
     locator_recover = WebElement(css_selector='.b-link-popup.g-alttext-deepblue')
 
-    # Вход или регистрация в Лабиринте
-    Locator_auth = WebElement(css_selector='div.lab-modal-content')
-    locator_phone = WebElement(css_selector='input[placeholder="Введите свой код скидки, телефон или эл.почту"]')

@@ -76,29 +76,20 @@ def test_check_main_search(web_browser):
     page.Locator_search_btn.click()
 
     # Убедитесь, что пользователь может видеть список продуктов:
-    assert page.products_titles.count() == 159
+    assert page.Locator_abc.get_text() == '159'
 
-    # Убедитесь, что пользователь нашел соответствующие продукты
-    for title in page.products_titles.get_text():
-        msg = 'Wrong product in search "{}"'.format(title)
-        assert 'Азбука загадок' in title.lower(), msg
 
 def test_check_wrong_input_in_search(web_browser):
-        """ Убедитесь, что ввод с неправильной раскладкой клавиатуры работает нормально. """
-        page = MainPage(web_browser)
+    """ Убедитесь, что ввод с неправильной раскладкой клавиатуры работает нормально. """
+    page = MainPage(web_browser)
 
-        page.Locator_search = 'fp,erf pfufljr'
-        page.search_run_button.click()
+    page.Locator_search = 'fp,erf pfufljr'
+    page.Locator_search_btn.click()
 
-        # Verify that user can see the list of products:
-        assert page.products_titles.count() == 159
+    # Убедитесь, что пользователь может видеть список продуктов:
+    assert page.Locator_abc.is_visible()
 
-        # Make sure user found the relevant products
-        for title in page.products_titles.get_text():
-            msg = 'Wrong product in search "{}"'.format(title)
-            assert 'Азбука загадок' in title.lower(), msg
-
-@pytest.mark.xfail(reason="Filter by price doesn't work")
+@pytest.mark.xfail(reason="Фильтр по цене не работает")
 def test_check_sort_by_price(web_browser):
     """ Убедитесь что сортировка по цене работает нормально"""
 
