@@ -21,7 +21,8 @@ class MainPage(WebPage):
 
     locator_enter_btn = WebElement(id='g-recap-0-btn')
     Locator_text =WebElement(id="_inputnamepin_95")
-    Locator_negative = WebElement(xpath='//*@class="full-input__msg-small js-msg-small"]')
+    Locator_negative = WebElement(xpath='//small[@class="full-input__msg-small js-msg-small" and '
+                                          'contains (text(),"Введенного кода не существует")]')
 
     # Локатор кнопки поиск
     Locator_search = WebElement(id='search-field')
